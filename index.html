@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Universe You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <canvas id="stars"></canvas>
+
+  <main class="hero">
+    <h1 class="title">
+      PARALLEL<br />
+      UNIVERSE YOU
+    </h1>
+
+    <p class="tagline">One decision.<br />Infinite versions of you.</p>
+
+    <div class="input-card">
+      <label for="decision" class="input-label">What decision changed your life?</label>
+      <input
+        type="text"
+        id="decision"
+        placeholder="I chose ECE instead of CSE..."
+        autocomplete="off"
+      />
+      <button id="splitBtn" class="split-btn">
+        🔮 SPLIT MY REALITY
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
