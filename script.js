@@ -237,7 +237,6 @@ againBtn.addEventListener("click", () => {
 // UPDATE CARDS WITH AI RESULTS
 
 function updateRealityCards(data) {
-
   fillCard(".card-a", data.realityA);
   fillCard(".card-b", data.realityB);
   fillCard(".card-c", data.realityC);
@@ -255,7 +254,6 @@ function fillCard(selector, reality) {
   timeline[1].textContent = reality.twoYears;
   timeline[2].textContent = reality.fiveYears;
 
-  // Animate stat bars — small delay so the width transition is visible
   setTimeout(() => {
     card.querySelector(".stat-happiness").style.width = clampPercent(reality.happiness) + "%";
     card.querySelector(".stat-wealth").style.width = clampPercent(reality.wealth) + "%";
@@ -274,11 +272,7 @@ function clampPercent(value) {
 
 function updateBattle(data) {
 
-  const realities = {
-    A: data.realityA,
-    B: data.realityB,
-    C: data.realityC
-  };
+  const realities = { A: data.realityA, B: data.realityB, C: data.realityC };
 
   battleBars.innerHTML = "";
 
@@ -286,7 +280,6 @@ function updateBattle(data) {
 
     const reality = realities[letter];
 
-    // Overall score = happiness + wealth + (100 - stress) + a bit of chaos, capped at 100
     const overallScore = Math.round(
       (reality.happiness + reality.wealth + (100 - reality.stress) + (reality.chaos * 0.3)) / 3.3
     );
