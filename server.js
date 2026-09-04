@@ -1,11 +1,12 @@
 require("dotenv").config();
 
 const express = require("express");
+const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/api/split", async (req, res) => {
   const decision = req.body.decision;
@@ -70,14 +71,14 @@ Return ONLY valid JSON in exactly this structure, with no extra text before or a
           "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
         },
         body: JSON.stringify({
-          model: "openai/gpt-oss-20b",
+         model: "openai/gpt-oss-20b",
           messages: [
             { role: "system", content: "You always reply with ONLY valid JSON, no markdown, no extra text." },
             { role: "user", content: prompt }
           ],
           temperature: 1.1,
-          max_completion_tokens: 1500,
-          response_format: { type: "json_object" }
+          max_completion_tokens: 2500,
+          
         })
       }
     );
