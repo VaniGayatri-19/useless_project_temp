@@ -123,6 +123,10 @@ Return ONLY valid JSON in exactly this structure, with no extra text before or a
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Parallel Universe You running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Parallel Universe You running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
