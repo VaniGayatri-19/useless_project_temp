@@ -2,34 +2,46 @@
 
 
 
-# [Project Name] 🎯
+# [Parallel Universe You] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [ChaosINC]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
+- Team Lead: [Vani Gayatri S R] - [LBS Institute of Technology for Women]
+- Member 2: [Neha Rose Babu] - [LBS Institute of Technology for Women]
 - Member 3: [Name] - [College]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Parallel Universe You is an AI-powered multiverse simulator, where you enter a real
+life decision and see three alternate timelines play out — the reality you chose,
+the path you almost took, and a wildly unexpected chaos timeline — complete with
+animated stats, a universe battle, and a regret score.]
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[We made an AI that takes your one regret-worthy decision, and makes three
+entire alternate lives for you, the one you're living and the one you almost
+lived, and one so chaotic it probably shouldn't be legal. With stats, a cinematic
+multiverse-splitting animation, and a battle royale between your
+selves to see which one "won" at life. You're welcome.]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[We throw your decision into an AI blender and pull out three parallel yous:
+Reality A (the boring truth), Reality B (the "what if" that haunts you), and
+Reality C (a plot twist even you didn't see coming). Then we make them fight
+for the title of Best Life, hand out a Regret Score, and stamp your reality
+with an official Multiverse ID — because if it's not catalogued, did it even
+happen?]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- [HTML, CSS, JavaScript, Node.js]
+- [Express.js]
+- [dotenv]
+- [VS Code, Groq API (AI text generation), Google Fonts (Space Grotesk, Inter)]
 
 For Hardware:
 - [List main components]
@@ -39,10 +51,13 @@ For Hardware:
 ### Implementation
 For Software:
 # Installation
-[commands]
+[git clone https://github.com/VaniGayatri-19/useless_project_temp.git
+cd useless_project_temp
+npm install
+]
 
 # Run
-[commands]
+[node server.js]
 
 ### Project Documentation
 For Software:

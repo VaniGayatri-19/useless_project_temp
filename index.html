@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Universe You</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <!-- LANDING PAGE -->
+  <main class="hero" id="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">✦ MULTIVERSE SIMULATOR</div>
+
+      <h1 class="title">
+        PARALLEL<br>
+        <span>UNIVERSE YOU</span>
+      </h1>
+
+      <p class="tagline">
+        One decision.<br>
+        Infinite versions of you.
+      </p>
+
+      <div class="input-card">
+        <label for="decision" class="input-label">What decision changed your life?</label>
+        <input type="text" id="decision" placeholder="I chose ECE instead of CSE..." autocomplete="off">
+        <button id="splitBtn" class="split-btn">
+          <span>🔮</span> SPLIT MY REALITY
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- TRANSITION -->
+  <section id="transition" class="transition hidden">
+    <div class="dimension-glow"></div>
+
+    <div class="portal-stage">
+
+      <div class="status-wrapper">
+        <div class="status-dot"></div>
+        <p id="transitionText" class="transition-text">DECISION LOCKED</p>
+      </div>
+
+      <div id="centralPortal" class="central-portal">
+        <div class="portal-ring ring-outer"></div>
+        <div class="portal-ring ring-middle"></div>
+        <div class="portal-ring ring-inner"></div>
+        <div class="portal-core">
+          <div class="core-symbol">◉</div>
+          <span>YOU</span>
+        </div>
+      </div>
+
+      <div id="universePortals" class="universe-portals">
+
+        <div class="universe-portal portal-a" id="portalA">
+          <div class="portal-orbit"></div>
+          <div class="portal-icon">A</div>
+          <div class="portal-info">
+            <span class="portal-number">REALITY A</span>
+            <h3>THE PATH<br>YOU TOOK</h3>
+            <p>Your current timeline</p>
+          </div>
+        </div>
+
+        <div class="universe-portal portal-b" id="portalB">
+          <div class="portal-orbit"></div>
+          <div class="portal-icon">B</div>
+          <div class="portal-info">
+            <span class="portal-number">REALITY B</span>
+            <h3>THE PATH<br>YOU ALMOST TOOK</h3>
+            <p>The choice that could have been</p>
+          </div>
+        </div>
+
+        <div class="universe-portal portal-c" id="portalC">
+          <div class="portal-orbit"></div>
+          <div class="portal-icon">C</div>
+          <div class="portal-info">
+            <span class="portal-number">REALITY C</span>
+            <h3>THE WILDEST<br>TIMELINE</h3>
+            <p>The unexpected version of you</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p id="decisionDisplay" class="decision-display"></p>
+
+    </div>
+  </section>
+
+    <!-- RESULTS -->
+  <section id="results" class="results hidden">
+
+    <div class="results-header">
+      <div class="eyebrow">✦ REALITY SPLIT COMPLETE</div>
+      <h2>THREE VERSIONS<br><span>OF YOU</span></h2>
+      <p id="resultDecision"></p>
+    </div>
+
+    <div class="reality-grid">
+
+      <article class="reality-card card-a">
+        <div class="card-top">
+          <span class="card-letter">A</span>
+          <span class="card-reality">REALITY A</span>
+        </div>
+        <div class="card-icon">◉</div>
+        <h3>THE PATH<br>YOU TOOK</h3>
+        <p class="card-description">The timeline you're currently living.</p>
+
+        <div class="stats-grid">
+          <div class="stat-row">
+            <span class="stat-label">❤️ Happiness</span>
+            <div class="stat-bar"><div class="stat-fill stat-happiness"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">💰 Wealth</span>
+            <div class="stat-bar"><div class="stat-fill stat-wealth"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😵 Stress</span>
+            <div class="stat-bar"><div class="stat-fill stat-stress"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😂 Chaos</span>
+            <div class="stat-bar"><div class="stat-fill stat-chaos"></div></div>
+          </div>
+        </div>
+
+        <div class="timeline-mini">
+          <div><span>NOW</span><p>—</p></div>
+          <div><span>+2 YEARS</span><p>—</p></div>
+          <div><span>+5 YEARS</span><p>—</p></div>
+        </div>
+      </article>
+
+      <article class="reality-card card-b">
+        <div class="card-top">
+          <span class="card-letter">B</span>
+          <span class="card-reality">REALITY B</span>
+        </div>
+        <div class="card-icon">◇</div>
+        <h3>THE PATH<br>YOU ALMOST TOOK</h3>
+        <p class="card-description">A different choice, a different you.</p>
+
+        <div class="stats-grid">
+          <div class="stat-row">
+            <span class="stat-label">❤️ Happiness</span>
+            <div class="stat-bar"><div class="stat-fill stat-happiness"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">💰 Wealth</span>
+            <div class="stat-bar"><div class="stat-fill stat-wealth"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😵 Stress</span>
+            <div class="stat-bar"><div class="stat-fill stat-stress"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😂 Chaos</span>
+            <div class="stat-bar"><div class="stat-fill stat-chaos"></div></div>
+          </div>
+        </div>
+
+        <div class="timeline-mini">
+          <div><span>NOW</span><p>—</p></div>
+          <div><span>+2 YEARS</span><p>—</p></div>
+          <div><span>+5 YEARS</span><p>—</p></div>
+        </div>
+      </article>
+
+      <article class="reality-card card-c">
+        <div class="card-top">
+          <span class="card-letter">C</span>
+          <span class="card-reality">REALITY C</span>
+        </div>
+        <div class="card-icon">✦</div>
+        <h3>THE WILDEST<br>TIMELINE</h3>
+        <p class="card-description">The unexpected version of you.</p>
+
+        <div class="stats-grid">
+          <div class="stat-row">
+            <span class="stat-label">❤️ Happiness</span>
+            <div class="stat-bar"><div class="stat-fill stat-happiness"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">💰 Wealth</span>
+            <div class="stat-bar"><div class="stat-fill stat-wealth"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😵 Stress</span>
+            <div class="stat-bar"><div class="stat-fill stat-stress"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">😂 Chaos</span>
+            <div class="stat-bar"><div class="stat-fill stat-chaos"></div></div>
+          </div>
+        </div>
+
+        <div class="timeline-mini">
+          <div><span>NOW</span><p>—</p></div>
+          <div><span>+2 YEARS</span><p>—</p></div>
+          <div><span>+5 YEARS</span><p>—</p></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- UNIVERSE BATTLE -->
+    <section class="battle-section">
+
+      <div class="eyebrow">⚔️ WHICH YOU WINS?</div>
+      <h2 class="battle-title">UNIVERSE BATTLE</h2>
+
+      <div class="battle-bars" id="battleBars">
+        <!-- filled dynamically by JS -->
+      </div>
+
+      <div class="battle-result" id="battleResult">
+        <span class="battle-trophy">🏆</span>
+        <span id="battleWinner">—</span>
+        <p id="battleVerdict"></p>
+      </div>
+
+    </section>
+
+    <button id="againBtn" class="again-btn">↻ SPLIT ANOTHER REALITY</button>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
